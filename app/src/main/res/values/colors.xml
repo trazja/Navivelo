@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#fff9aa</color>
+    <color name="appNameColor">#000000</color>
+
+
+    <!--Buttons-->
+    <color name="buttonColor">#873d15</color>
+    <color name="buttonTextColor">#fff9aa</color>
+
+    <!--Hints-->
+    <color name="textColorHint">#c4957b</color>
+
+    <color name="textColorLink">#ef7102</color>
+
 </resources>
