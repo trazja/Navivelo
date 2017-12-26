@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,7 +19,6 @@ public class LoginActivity extends AppCompatActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText loginPassword = (EditText) findViewById(R.id.loginPassword);
         TextView registerLink = (TextView) findViewById(R.id.registerLink);
-
 
         Button loginButton = (Button) findViewById(R.id.loginButton);
 
@@ -33,8 +33,19 @@ public class LoginActivity extends AppCompatActivity {
 
             }
 
-
-
 });
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                
+                Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
+
+
+                Toast.makeText(LoginActivity.this, R.string.login_incorrect, Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
     }
 }

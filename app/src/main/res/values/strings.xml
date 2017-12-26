@@ -8,5 +8,7 @@
     <string name="email">E-mail</string>
     <string name="first_name">Imię</string>
     <string name="last_name">Nazwisko</string>
+    <string name="login_correct">Zalogowano pomyślnie</string>
+    <string name="login_incorrect">Błędny login lub hasło</string>
 
 </resources>
