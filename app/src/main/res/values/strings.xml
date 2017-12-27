@@ -1,14 +1,18 @@
 <resources>
-    <string name="app_name">NAVIVELO</string>
+    <string name="app_name" translatable="false">NAVIVELO</string>
     <string name="register">Zarejestruj się</string>
     <string name="no_account">Nie masz jeszcze konta?</string>
     <string name="login">Zaloguj się</string>
     <string name="password">Hasło</string>
+    <string name="confirm_password">Powtórz hasło</string>
     <string name="user_name">Login</string>
     <string name="email">E-mail</string>
     <string name="first_name">Imię</string>
     <string name="last_name">Nazwisko</string>
     <string name="login_correct">Zalogowano pomyślnie</string>
     <string name="login_incorrect">Błędny login lub hasło</string>
-
+    <string name="title_activity_select_route" translatable="false">SelectRoute</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBLakV6ROC_KvezA9-nF9uMtpmmP0JFfDI</string>
+    <string name="passwords_not_equal">Podane hasła nie są identyczne</string>
+    <string name="registration_ok">Pomyślnie zarejestrowano</string>
 </resources>

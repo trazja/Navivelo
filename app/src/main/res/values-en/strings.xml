@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NAVIVELO</string>
+    <string name="register">Create account</string>
+    <string name="no_account">You haven\'t got account yet?</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="user_name">Login</string>
+    <string name="email">E-mail</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="login_correct">Login succesfully</string>
+    <string name="login_incorrect">Incorret login or password</string>
+    <string name="passwords_not_equal">Both passwords are not the same</string>
+    <string name="registration_ok">Registration done succesfully</string>
+</resources>

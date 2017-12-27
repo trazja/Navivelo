@@ -16,8 +16,9 @@
         android:id="@+id/passwordRegisterText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/registerButton"
-        android:layout_alignStart="@+id/emailText"
+        android:layout_alignBaseline="@+id/confirmPassword"
+        android:layout_alignBottom="@+id/confirmPassword"
+        android:layout_alignStart="@+id/userName"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -37,7 +38,7 @@
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordRegisterText"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/register"
         android:theme="@style/SimpleButton" />
@@ -93,16 +94,16 @@
         android:textColorHint="@color/textColorHint" />
 
     <EditText
-        android:id="@+id/passwordRegisterText"
+        android:id="@+id/confirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/userName"
-        android:layout_below="@+id/userName"
-        android:layout_marginTop="31dp"
+        android:layout_alignStart="@+id/emailText"
+        android:layout_below="@+id/emailText"
+        android:layout_marginTop="35dp"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="@string/confirm_password"
         android:inputType="textPassword"
-        android:singleLine="false"
+        android:singleLine="true"
         android:textColorHint="@color/textColorHint" />
 
 

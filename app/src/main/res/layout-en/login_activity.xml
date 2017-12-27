@@ -2,11 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-
     android:background="@color/colorBackground"
-    android:theme="@style/AppTheme"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
     tools:context="com.example.tryhu.navivelo.LoginActivity">
 
     <TextView
@@ -24,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/linearLayout"
         android:layout_below="@+id/nazwaAplikacji"
-        android:layout_marginTop="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="@string/user_name"
         android:inputType="textPersonName"
@@ -34,9 +33,10 @@
         android:id="@+id/loginPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nazwaAplikacji"
+        android:layout_alignStart="@+id/login"
         android:layout_below="@+id/login"
-        android:layout_marginTop="31dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -48,16 +48,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="@string/login" />
+        android:layout_marginTop="60dp"
+        android:text="@string/login"
+        android:theme="@style/SimpleButton"/>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginButton"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:id="@+id/textView2"

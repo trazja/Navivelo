@@ -16,9 +16,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
-        EditText login = (EditText) findViewById(R.id.login);
-        EditText loginPassword = (EditText) findViewById(R.id.loginPassword);
-        TextView registerLink = (TextView) findViewById(R.id.registerLink);
+        final EditText userName = (EditText) findViewById(R.id.login);
+        final EditText userPassword = (EditText) findViewById(R.id.loginPassword);
+        final TextView registerLink = (TextView) findViewById(R.id.registerLink);
 
         Button loginButton = (Button) findViewById(R.id.loginButton);
 
@@ -33,16 +33,30 @@ public class LoginActivity extends AppCompatActivity {
 
             }
 
-});
+        });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                
-                Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
+                final String login = userName.getText().toString();
+                final String password = userPassword.getText().toString();
+
+                //na razie zrobiłam tylko takiego if'a, żeby w ogóle dało radę się zalogować - nie bardzo wiem, w jaki sposób zrobić tutaj
+                //bazę użytkowników
+
+                if (login.equals("admin") && password.equals("admin")) {
+
+                    Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
+
+                    //jak dodać przejście do kolejnego view?
 
 
-                Toast.makeText(LoginActivity.this, R.string.login_incorrect, Toast.LENGTH_SHORT).show();
+
+
+                } else {
+
+                    Toast.makeText(LoginActivity.this, R.string.login_incorrect, Toast.LENGTH_SHORT).show();
+                }
 
 
             }

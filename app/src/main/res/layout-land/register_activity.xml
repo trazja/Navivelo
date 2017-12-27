@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context="com.example.tryhu.navivelo.RegisterActivity">
+
+
+    <EditText
+        android:id="@+id/passwordRegisterText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/confirmPassword"
+        android:layout_alignBottom="@+id/confirmPassword"
+        android:layout_alignStart="@+id/userName"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:singleLine="false"
+        android:textColorHint="@color/textColorHint" />
+
+    <TextView
+        android:id="@+id/nazwaAplikacji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:theme="@style/AppName" />
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register"
+        android:theme="@style/SimpleButton" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nazwaAplikacji"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/textColorHint" />
+
+    <EditText
+        android:id="@+id/lastNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameText"
+        android:layout_alignBottom="@+id/nameText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/textColorHint" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameText"
+        android:layout_below="@+id/nameText"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/textColorHint" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/userName"
+        android:layout_alignBottom="@+id/userName"
+        android:layout_alignStart="@+id/lastNameText"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/textColorHint" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailText"
+        android:layout_below="@+id/emailText"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColorHint="@color/textColorHint" />
+
+
+</RelativeLayout>
