@@ -11,9 +11,8 @@
     </style>
 
 
-
     <!--Styl podstawowego guzika-->
-    <style name ="SimpleButton" parent="Base.Widget.AppCompat.Button">
+    <style name="SimpleButton" parent="Base.Widget.AppCompat.Button">
         <item name="android:button">@color/buttonColor</item>
         <item name="android:textColor">@color/buttonTextColor</item>
         <item name="android:height">45dp</item>
@@ -23,7 +22,7 @@
 
     <!--Styl dla nazwy aplikacji-->
 
-    <style name="AppName" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <style name="AppName" parent="@android:style/Widget.TextView">
         <item name="android:textColor">@color/appNameColor</item>
         <item name="android:fontFamily">@font/chango</item>
         <item name="android:textSize">30sp</item>
@@ -31,7 +30,9 @@
         <item name="android:text">@string/app_name</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

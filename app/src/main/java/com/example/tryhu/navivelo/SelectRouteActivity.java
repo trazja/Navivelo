@@ -1,7 +1,7 @@
 package com.example.tryhu.navivelo;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,6 +22,8 @@ public class SelectRouteActivity extends FragmentActivity implements OnMapReadyC
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //getSupportFragmentManager().beginTransaction().add(new BlankFragment(), "").addToBackStack("").commit();
     }
 
 
