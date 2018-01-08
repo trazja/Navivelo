@@ -1,15 +1,16 @@
 <resources>
 
+
     <!-- Base application theme. -->
-    <style name="AppTheme.NoActionBar" parent="android:Theme.Holo.Light">
+    <style name="AppTheme.ActionBar" parent="android:Theme.Holo.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
 
+    </style>
 
     <!--Styl podstawowego guzika-->
     <style name="SimpleButton" parent="Base.Widget.AppCompat.Button">
@@ -19,20 +20,4 @@
         <item name="android:fadingEdgeLength">45dp</item>
 
     </style>
-
-    <!--Styl dla nazwy aplikacji-->
-
-    <style name="AppName" parent="@android:style/Widget.TextView">
-        <item name="android:textColor">@color/appNameColor</item>
-        <item name="android:fontFamily">@font/chango</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:text">@string/app_name</item>
-    </style>
-
-    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
 </resources>

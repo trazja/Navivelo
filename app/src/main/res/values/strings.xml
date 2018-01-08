@@ -15,4 +15,19 @@
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBLakV6ROC_KvezA9-nF9uMtpmmP0JFfDI</string>
     <string name="passwords_not_equal">Podane hasła nie są identyczne</string>
     <string name="registration_ok">Pomyślnie zarejestrowano</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="radio_button_fast">Trasa najszybsza</string>
+    <string name="radio_button_safe">Trasa bezpieczna</string>
+    <string name="radio_button_touristic">Trasa turystyczna</string>
+    <string name="navi_settings_button">Ustawienia nawigacji</string>
+    <string name="start">Podaj punkt początkowy</string>
+    <string name="end">Podaj punkt końcowy</string>
+    <string name="search">Wyszukaj trasę</string>
 </resources>

@@ -48,7 +48,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
 
-                    //jak dodać przejście do kolejnego view?
+                    Intent selectRouteIntent = new Intent(LoginActivity.this, SelectRouteActivity.class);
+                    startActivity(selectRouteIntent);
 
 
 
