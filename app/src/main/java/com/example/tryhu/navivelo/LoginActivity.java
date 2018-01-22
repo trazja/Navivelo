@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
 
-                    Intent selectRouteIntent = new Intent(LoginActivity.this, SelectRouteActivity.class);
+                    Intent selectRouteIntent = new Intent(LoginActivity.this, SelectRouteFragment.class);
                     startActivity(selectRouteIntent);
 
 
