@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.google.android.gms.location.places.ui.PlaceAutocomplete;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 
 import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
@@ -38,6 +40,8 @@ public class SelectRouteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Context ctx = getActivity().getApplicationContext();
+        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
 
         return inflater.inflate(R.layout.fragment_select_route, container, false);
     }
@@ -48,35 +52,47 @@ public class SelectRouteFragment extends Fragment {
         super.onStart();
         View view = getView();
         if (view != null) {
-            Context ctx = getApplicationContext();
 
 
-            Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
-
-
-            mapView = getView(R.id.simplyMap);
+            mapView = (MapView) view.findViewById(R.id.simplyMap);
             mapView.setBuiltInZoomControls(true);
             mapView.setMultiTouchControls(true);
             mapController = (MapController) this.mapView.getController();
             mapController.setZoom(1);
             mapView.setTileSource(TileSourceFactory.MAPNIK);
 
-            Button naviSettingsButton = (Button) findViewbyId(R.id.naviSettingsButton);
+            Button naviSettingsButton = (Button) view.findViewById(R.id.naviSettingsButton);
 
             naviSettingsButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent settingsIntent = new Intent(SelectRouteFragment, ItemFragment.class);
-                    SelectRouteFragment.this.startActivity(settingsIntent);
+                    /*Intent settingsIntent = new Intent(getContext(), ItemFragment.class);
+                    SelectRouteFragment.this.startActivity(settingsIntent);*/
+
+                    getActivity().getFragmentManager().beginTransaction()
+                            .add(R.id.fragment_container, new ItemFragment())
+                            .addToBackStack(null)
+                            .commit();
+                }
+            });
+
+            PlaceAutocompleteFragment auto = (PlaceAutocompleteFragment) getActivity()
+                    .getFragmentManager()
+                    .findFragmentById(R.id.place_autocomplete_fragment);
+
+            auto.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+                @Override
+                public void onPlaceSelected(Place place) {
 
                 }
 
+                @Override
+                public void onError(Status status) {
 
-
-
-        });
-
-}}
+                }
+            });
+        }
+    }
 
 
     public void onResume() {
@@ -86,7 +102,7 @@ public class SelectRouteFragment extends Fragment {
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().save(this, prefs);
-        Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        Configuration.getInstance().load(getContext(), PreferenceManager.getDefaultSharedPreferences(getContext()));
     }
 
 

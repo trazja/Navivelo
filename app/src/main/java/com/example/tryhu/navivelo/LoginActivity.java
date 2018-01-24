@@ -1,8 +1,8 @@
 package com.example.tryhu.navivelo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,10 +48,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
 
-                    Intent selectRouteIntent = new Intent(LoginActivity.this, SelectRouteFragment.class);
-                    startActivity(selectRouteIntent);
-
-
+                    Intent mainActivityIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(mainActivityIntent);
 
 
                 } else {
