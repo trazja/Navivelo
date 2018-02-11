@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<PreferenceScreen
+    android:key="navigation_settings_preference">
+
+    <CheckBoxPreference
+        android:key="be_aware_of_cars"
+        android:title="@string/be_aware_of_cars"
+
+        />
+
+    <CheckBoxPreference
+        android:key="be_aware_of_pedestrians"
+        android:title="@string/be_aware_of_pedestrians"
+
+        />
+    <CheckBoxPreference
+        android:key="be_aware_of_train_tram"
+        android:title="@string/be_aware_of_train_tram"
+
+        />
+    <CheckBoxPreference
+        android:key="go_on_road"
+        android:title="@string/go_on_road"
+
+        />
+    <CheckBoxPreference
+        android:key="go_on_left"
+        android:title="@string/go_on_left"
+
+        />
+
+    <CheckBoxPreference
+        android:key="steep_slip_road"
+        android:title="@string/steep_slip_road"
+
+        />
+    <CheckBoxPreference
+        android:key="narrow_road"
+        android:title="@string/narrow_road"
+
+        />
+
+    <CheckBoxPreference
+        android:key="slip_on_the_other_side"
+        android:title="@string/slip_on_the_other_side"
+
+        />
+
+    <CheckBoxPreference
+        android:key="faint_visibility"
+        android:title="@string/faint_visibility"
+
+        />
+    <CheckBoxPreference
+        android:key="light_signalling"
+        android:title="@string/light_signalling"
+
+        />
+
+
+</PreferenceScreen></ScrollView>
