@@ -35,15 +35,18 @@
     <string name="title_activity_maps">Map</string>
 
     <string name="be_aware_of_cars">uwaga na samochody</string>
-   <string name="be_aware_of_pedestrians">uwaga na pieszych</string>
-   <string name="be_aware_of_train_tram">uwaga na pociąg/tramwaj</string>
-   <string name="go_on_road">zjazd na jezdnię</string>
-   <string name="go_on_left">zjazd na lewy pas do skrętu w lewo</string>
-   <string name="steep_slip_road">stromy zjazd/wjazd</string>
-   <string name="narrow_road">wąski przejazd</string>
-   <string name="slip_on_the_other_side">zjazd na trasę po drugiej stronie jezdni</string>
-   <string name="faint_visibility">słaba widoczność</string>
-   <string name="light_signalling">kierunkowa sygnalizacja dla rowerów</string>
+    <string name="be_aware_of_pedestrians">uwaga na pieszych</string>
+    <string name="be_aware_of_train_tram">uwaga na pociąg/tramwaj</string>
+    <string name="go_on_road">zjazd na jezdnię</string>
+    <string name="go_on_left">zjazd na lewy pas do skrętu w lewo</string>
+    <string name="steep_slip_road">stromy zjazd/wjazd</string>
+    <string name="narrow_road">wąski przejazd</string>
+    <string name="slip_on_the_other_side">zjazd na trasę po drugiej stronie jezdni</string>
+    <string name="faint_visibility">słaba widoczność</string>
+    <string name="light_signalling">kierunkowa sygnalizacja dla rowerów</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

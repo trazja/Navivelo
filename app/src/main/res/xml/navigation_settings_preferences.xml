@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    >
-<PreferenceScreen
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="navigation_settings_preference">
 
     <CheckBoxPreference
@@ -16,6 +15,7 @@
 
         />
     <CheckBoxPreference
+        android:icon="@drawable/ic_directions_transit_black_24dp"
         android:key="be_aware_of_train_tram"
         android:title="@string/be_aware_of_train_tram"
 
@@ -53,11 +53,13 @@
         android:title="@string/faint_visibility"
 
         />
+
     <CheckBoxPreference
+
         android:key="light_signalling"
         android:title="@string/light_signalling"
 
         />
 
 
-</PreferenceScreen></ScrollView>
+</PreferenceScreen>

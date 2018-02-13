@@ -1,9 +1,11 @@
 package com.example.tryhu.navivelo;
 
-import android.nfc.Tag;
-import android.support.v4.app.FragmentActivity;
+
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.GeoDataClient;
@@ -36,6 +38,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         mGeoDataClient = Places.getGeoDataClient(this, null);
         mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
+
+        Button naviSettingsButton = (Button) findViewById(R.id.navi_settings_button);
+
+        naviSettingsButton.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick(View v) {
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.map,
+                                new NavigationSettingsFragment()).commit();
+            }
+        });
     }
 
 
@@ -66,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onPlaceSelected(Place place) {
                 // TODO: Get info about the selected place.
-                Log.i(TAG,"Place: " + place.getName());
+                Log.i(TAG, "Place: " + place.getName());
             }
 
             @Override
@@ -75,7 +91,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.i(TAG, "An error occurred: " + status);
             }
         });
+
+
     }
 
-
 }
+
+
+
+
+
