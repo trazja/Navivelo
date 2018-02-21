@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:key="navigation_settings_preference">
+    android:key="navigation_settings_preference"
+    >
 
     <CheckBoxPreference
         android:key="be_aware_of_cars"

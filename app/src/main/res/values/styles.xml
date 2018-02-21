@@ -25,6 +25,8 @@
         <item name="android:navigationBarColor">@android:color/background_dark</item>
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
         <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorControlNormal">@color/textColor</item>
+        <item name="android:colorControlActivated">@color/primaryDarkColor</item>
 
     </style>
 
