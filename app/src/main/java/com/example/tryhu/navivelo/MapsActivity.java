@@ -24,8 +24,8 @@ import com.google.android.gms.location.places.PlaceDetectionClient;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    protected GeoDataClient mGeoDataClient;
-    protected PlaceDetectionClient mPlaceDetectionClient;
+    //   protected GeoDataClient mGeoDataClient;
+    //   protected PlaceDetectionClient mPlaceDetectionClient;
 
 
     @Override
@@ -36,23 +36,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        mGeoDataClient = Places.getGeoDataClient(this, null);
-        mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
+     //      mGeoDataClient = Places.getGeoDataClient(this, null);
+       //     mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
 
-        Button naviSettingsButton = (Button) findViewById(R.id.navi_settings_button);
-
-        naviSettingsButton.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick(View v) {
-
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.map,
-                                new NavigationSettingsFragment()).commit();
-            }
-        });
     }
+
+
+    PlaceAutocompleteFragment autocompleteFragmentStart = (PlaceAutocompleteFragment)
+            getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
+       PlaceAutocompleteFragment autocompleteFragmentEnd = (PlaceAutocompleteFragment)
+            getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_end);
+//
+       // autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+//            public String TAG;
+//    }
+//
+//            @Override
+//            public void onPlaceSelected(Place place) {
+//                // TODO: Get info about the selected place.
+//                Log.i(TAG, "Place: " + place.getName());
+//            }
+//
+//            @Override
+//            public void onError(Status status) {
+//                // TODO: Handle the error.
+//                Log.i(TAG, "An error occurred: " + status);
+//            }});
+//
+//        Button naviSettingsButton = (Button) findViewById(R.id.navi_settings_button);
+//
+//        naviSettingsButton.setOnClickListener(new View.OnClickListener()
+//
+//        {
+//            @Override
+//            public void onClick(View v) {
+//
+//                getFragmentManager().beginTransaction()
+//                        .replace(R.id.map,
+//                                new NavigationSettingsFragment()).commit();
+//            }
+//        });
+
 
 
     /**
@@ -73,29 +97,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
-                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
-
-        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-            public String TAG;
-
-            @Override
-            public void onPlaceSelected(Place place) {
-                // TODO: Get info about the selected place.
-                Log.i(TAG, "Place: " + place.getName());
-            }
-
-            @Override
-            public void onError(Status status) {
-                // TODO: Handle the error.
-                Log.i(TAG, "An error occurred: " + status);
-            }
-        });
-
 
     }
 
+
 }
+
+
+
 
 
 

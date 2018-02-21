@@ -23,7 +23,7 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:singleLine="false"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <TextView
         android:id="@+id/nazwaAplikacji"
@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/register"
-        android:theme="@style/SimpleButton" />
+        android:background="@drawable/simple_button" />
 
     <EditText
         android:id="@+id/nameText"
@@ -54,7 +54,7 @@
         android:ems="10"
         android:hint="@string/first_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/lastNameText"
@@ -67,7 +67,7 @@
         android:ems="10"
         android:hint="@string/last_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/userName"
@@ -79,7 +79,7 @@
         android:ems="10"
         android:hint="@string/user_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/emailText"
@@ -91,7 +91,7 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/confirmPassword"
@@ -104,7 +104,7 @@
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
         android:singleLine="true"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
 
 </RelativeLayout>

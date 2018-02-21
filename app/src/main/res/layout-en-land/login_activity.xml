@@ -28,7 +28,7 @@
         android:ems="10"
         android:hint="@string/user_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/loginPassword"
@@ -40,7 +40,7 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/textColor" />
 
     <Button
         android:id="@+id/loginButton"
@@ -49,7 +49,8 @@
         android:layout_below="@+id/loginPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:text="@string/login" />
+        android:text="@string/login"
+        android:background="@drawable/simple_button"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -75,7 +76,7 @@
             android:linksClickable="true"
             android:text="@string/register"
             android:textColor="@android:color/background_dark"
-            android:textColorLink="@color/textColorLink"
+            android:textColorLink="@color/textColor"
             android:textSize="12sp" />
     </LinearLayout>
 

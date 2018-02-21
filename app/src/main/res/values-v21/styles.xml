@@ -1,23 +1,23 @@
 <resources>
 
 
-    <!-- Base application theme. -->
-    <style name="AppTheme.ActionBar" parent="android:Theme.Holo.Light">
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
 
     </style>
 
-    <!--Styl podstawowego guzika-->
-    <style name="SimpleButton" parent="Base.Widget.AppCompat.Button">
-        <item name="android:button">@color/buttonColor</item>
-        <item name="android:textColor">@color/buttonTextColor</item>
-        <item name="android:height">45dp</item>
-        <item name="android:fadingEdgeLength">45dp</item>
-
+    <style name="AppName" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:fontFamily">@font/chango</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/app_name</item>
     </style>
 </resources>

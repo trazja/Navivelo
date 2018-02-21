@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+
     android:theme="@style/Theme.AppCompat.NoActionBar"
     tools:context="com.example.tryhu.navivelo.LoginActivity">
 
@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/linearLayout"
-        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/login"
+        android:layout_marginTop="45dp"
         android:theme="@style/AppName" />
 
     <EditText
@@ -27,7 +27,9 @@
         android:ems="10"
         android:hint="@string/user_name"
         android:inputType="textPersonName"
-        android:textColorHint="@color/textColorHint" />
+        android:singleLine="false"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor" />
 
     <EditText
         android:id="@+id/loginPassword"
@@ -40,7 +42,10 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColorHint="@color/textColorHint" />
+        android:textColorHint="@color/primaryDarkColor"
+        android:textColor="@color/textColor"
+        android:backgroundTint="@color/primaryDarkColor"
+        android:background="@drawable/edittext_border"/>
 
     <Button
         android:id="@+id/loginButton"
@@ -48,9 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/simple_button"
         android:text="@string/login"
-        android:theme="@style/SimpleButton"/>
+        android:textColor="@color/textColor"
+        android:textStyle="bold" />
 
 <LinearLayout
     android:layout_width="wrap_content"
@@ -66,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="@string/no_account"
-        android:textColor="@android:color/black"
+        android:textColor="@color/textColor"
         android:textSize="12sp" />
 
     <TextView
@@ -76,7 +83,7 @@
         android:linksClickable="true"
         android:text="@string/register"
         android:textColor="@android:color/background_dark"
-        android:textColorLink="@color/textColorLink"
+        android:textColorLink="@color/textColor"
         android:textSize="12sp" />
 </LinearLayout>
 
