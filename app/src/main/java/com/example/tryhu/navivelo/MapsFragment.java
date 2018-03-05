@@ -33,7 +33,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
         // Required empty public constructor
     }
 
+    private MapsFragmentListener listener;
 
+    public interface MapsFragmentListener{
+
+    };
 
 
 
@@ -52,21 +56,21 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
             public void onClick(View v) {
 
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.container,
+                        .replace(R.id.mapcontainer,
                                 new NavigationSettingsFragment()).addToBackStack(null).commit();
 
             }
 
         });
 
-        return view;
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager()
+
+        MapFragment mapFragment = (MapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         return inflater.inflate(R.layout.fragment_maps, container, false);
 
-     
+
 
         //  mGeoDataClient = Places.getGeoDataClient(this, null);
         //    mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
@@ -90,9 +94,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     }
 
     PlaceAutocompleteFragment autocompleteFragmentStart = (PlaceAutocompleteFragment)
-            getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
+            getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
     PlaceAutocompleteFragment autocompleteFragmentEnd = (PlaceAutocompleteFragment)
-            getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_end);
+            getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_end);
 
     // autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
     public String TAG;

@@ -1,5 +1,8 @@
 package com.example.tryhu.navivelo;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,10 +51,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
 
-                    Intent selectRouteIntent = new Intent(LoginActivity.this, MapsActivity.class);
+                    Intent selectRouteIntent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(selectRouteIntent);
-
-
 
 
                 } else {
