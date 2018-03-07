@@ -1,10 +1,10 @@
 package com.example.tryhu.navivelo;
 
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         MapsFragment mapsFragment = new MapsFragment();
-       FragmentTransaction transaction = getFragmentManager().beginTransaction();
+       FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
        transaction.add(R.id.mapcontainer, mapsFragment);
        transaction.commit();
 

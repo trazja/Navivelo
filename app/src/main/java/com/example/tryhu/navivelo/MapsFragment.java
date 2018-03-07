@@ -1,16 +1,16 @@
 package com.example.tryhu.navivelo;
 
-
-import android.app.Fragment;
 import android.os.Bundle;
 
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -39,7 +39,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     };
 
-
+    SupportPlaceAutocompleteFragment  autocompleteFragmentStart;
+    SupportPlaceAutocompleteFragment  autocompleteFragmentEnd;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,22 +56,23 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
 
-                getFragmentManager().beginTransaction()
+                getActivity().getFragmentManager().beginTransaction()
                         .replace(R.id.mapcontainer,
                                 new NavigationSettingsFragment()).addToBackStack(null).commit();
 
             }
 
         });
-
-
-
-        MapFragment mapFragment = (MapFragment) getChildFragmentManager()
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        return inflater.inflate(R.layout.fragment_maps, container, false);
 
+        autocompleteFragmentStart = (SupportPlaceAutocompleteFragment)
+                getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
+        autocompleteFragmentEnd = (SupportPlaceAutocompleteFragment )
+                getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_end);
 
+        return view;
 
         //  mGeoDataClient = Places.getGeoDataClient(this, null);
         //    mPlaceDetectionClient = Places.getPlaceDetectionClient(this, null);
@@ -87,16 +89,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
 //            // TODO: Handle the error.
 //            Log.i(TAG, "An error occurred: " + status);
 //        }
-
-
-
-
     }
-
-    PlaceAutocompleteFragment autocompleteFragmentStart = (PlaceAutocompleteFragment)
-            getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_start);
-    PlaceAutocompleteFragment autocompleteFragmentEnd = (PlaceAutocompleteFragment)
-            getChildFragmentManager().findFragmentById(R.id.place_autocomplete_fragment_end);
 
     // autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
     public String TAG;
